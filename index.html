@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tatka — Simple Site</title>
+  <meta name="description" content="A simple GitHub Pages site for the Tatka project." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="assets/logo.svg" alt="Tatka logo" class="logo" />
+        <span class="brand-name">Tatka</span>
+      </a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to Tatka</h1>
+        <p class="lead">A minimal, responsive starting site hosted with GitHub Pages.</p>
+        <p><a class="btn" href="#about">Get started</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About this site</h2>
+        <p>This is a simple static site template (HTML + CSS) ready to be hosted with GitHub Pages. Use it as a base and customize the content, styles, and assets.</p>
+      </div>
+    </section>
+
+    <section id="features" class="section alt">
+      <div class="container">
+        <h2>Features</h2>
+        <ul>
+          <li>Responsive layout</li>
+          <li>Simple, readable CSS</li>
+          <li>Zero-dependency (no build step required)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Repo: <a href="https://github.com/Mango783/Tatka---webovky" target="_blank" rel="noopener">Mango783/Tatka---webovky</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Tatka — Built with GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script>
+    // Auto fill year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
