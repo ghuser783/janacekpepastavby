@@ -86,11 +86,11 @@ header {
     font-weight: bold;
 }
 
-/* --- PROJEKTY (VRÁCENO ZPĚT) --- */
+/* --- PROJEKTY (UPRAVENO NA MAX 3 VEDLE SEBE) --- */
 .grid {
     display: grid;
-    /* Návrat k původní velikosti - na mobilu bude 1 sloupec */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Nastavení na fixní 3 sloupce pro desktop */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-bottom: 40px;
 }
@@ -100,6 +100,7 @@ header {
     padding: 15px;
     background: var(--light-grey);
     text-align: center;
+    box-sizing: border-box;
 }
 
 .image-box {
@@ -140,6 +141,13 @@ footer {
 }
 
 /* --- RESPONZIVITA --- */
+@media (max-width: 992px) {
+    /* Na tabletech 2 sloupce */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -158,5 +166,12 @@ footer {
     .side-contact {
         width: 100%;
         min-width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Na mobilech 1 sloupec */
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
