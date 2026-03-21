@@ -42,7 +42,6 @@ header {
     align-items: center;
     padding: 15px;
     box-sizing: border-box;
-    /* Zaoblení rohů */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
@@ -86,10 +85,21 @@ header {
     font-weight: bold;
 }
 
-/* --- PROJEKTY (UPRAVENO NA MAX 3 VEDLE SEBE) --- */
+.lists-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.list-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* --- PROJEKTY --- */
 .grid {
     display: grid;
-    /* Nastavení na fixní 3 sloupce pro desktop */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-bottom: 40px;
@@ -142,20 +152,8 @@ footer {
 
 /* --- RESPONZIVITA --- */
 @media (max-width: 992px) {
-    /* Na tabletech 2 sloupce */
     .grid {
         grid-template-columns: repeat(2, 1fr);
-    
-    .lists-container {
-        display: flex;
-        gap: 40px;
-        flex-wrap: wrap; /* Zajistí zalomení na malých displejích */
-}
-
-    .list-item {
-        flex: 1;
-        min-width: 250px; /* Minimální šířka, než se seznamy dají pod sebe */
-}
     }
 }
 
@@ -181,7 +179,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-    /* Na mobilech 1 sloupec */
     .grid {
         grid-template-columns: 1fr;
     }
